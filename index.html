@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b51f2e">
+  <meta name="description" content="工银财趣 21天财富剧本交互演示">
+  <title>工银财趣 21天财富剧本 Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+  <header class="topbar">
+    <div class="brand" aria-label="工银财趣">
+      <span class="brand-mark" aria-hidden="true">财</span>
+      <span>
+        <strong>工银财趣</strong>
+        <small>21天财富剧本</small>
+      </span>
+    </div>
+
+    <div class="topbar-actions">
+      <span class="demo-tag">演示数据</span>
+      <button class="icon-button" id="reset-demo" type="button" title="重置演示" aria-label="重置演示">
+        <span aria-hidden="true">↻</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主导航">
+      <nav class="side-nav">
+        <button class="nav-item is-active" type="button" data-view="today" aria-current="page">
+          <span class="nav-symbol" aria-hidden="true">●</span>
+          今日
+        </button>
+        <button class="nav-item" type="button" data-view="map">
+          <span class="nav-symbol" aria-hidden="true">▦</span>
+          21天地图
+        </button>
+        <button class="nav-item" type="button" data-view="team">
+          <span class="nav-symbol" aria-hidden="true">◎</span>
+          我的小队
+        </button>
+      </nav>
+
+      <section class="side-progress" aria-labelledby="side-progress-title">
+        <p class="eyebrow">当前剧本</p>
+        <h2 id="side-progress-title">我的小家</h2>
+        <p>第二幕 积累</p>
+        <div class="progress-track" aria-label="剧本总进度">
+          <span id="side-progress-bar"></span>
+        </div>
+        <div class="progress-caption">
+          <span id="side-progress-text">8 / 21 天</span>
+          <span id="side-progress-percent">38%</span>
+        </div>
+      </section>
+
+      <p class="side-note">本原型不连接银行账户，也不会产生真实交易。</p>
+    </aside>
+
+    <main id="main-content" class="main-content">
+      <section class="view is-active" id="view-today" data-view-panel="today" tabindex="-1">
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow" id="today-date">第 8 天 · 星期二</p>
+            <h1 id="today-heading">小家突发状况</h1>
+            <p id="today-subheading">真正的安心，是意外来时手里还有选择。</p>
+          </div>
+          <div class="streak-chip" aria-label="连续打卡">
+            <span class="streak-number" id="streak-count">7</span>
+            <span>连续打卡</span>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <section class="scene-card" aria-labelledby="scene-title">
+            <div class="scene-toolbar">
+              <div>
+                <p class="eyebrow">我的小家</p>
+                <h2 id="scene-title">从能住，到住得安心</h2>
+              </div>
+              <span class="chapter-badge" id="chapter-badge">第二幕</span>
+            </div>
+
+            <div class="scene-frame" id="scene-frame">
+              <img id="room-image" src="room-day-8-before.svg" alt="刚完成基础布置但水管漏水的小房间">
+              <div class="scene-status" id="scene-status">水管漏了，需要一笔以防万一的钱</div>
+            </div>
+
+            <div class="scene-footer">
+              <div>
+                <span class="metric-label">小家完成度</span>
+                <strong id="room-percent">36%</strong>
+              </div>
+              <div class="mini-progress" aria-hidden="true"><span id="room-progress-bar"></span></div>
+              <div class="furniture-count"><strong id="furniture-count">6</strong> / 18 件</div>
+            </div>
+          </section>
+
+          <section class="task-card" aria-labelledby="task-title">
+            <div class="task-kicker">
+              <span>今日剧情</span>
+              <span>约 3 分钟</span>
+            </div>
+            <h2 id="task-title">水管突然爆了</h2>
+            <p class="task-story">维修师傅说至少要 300 元。你不必今天凑齐，但可以先为意外留下一小笔。</p>
+
+            <div class="calculator" aria-labelledby="calculator-title">
+              <div class="calculator-heading">
+                <h3 id="calculator-title">我的安全垫</h3>
+                <output id="coverage-output" for="monthly-cost current-reserve">约 0.6 个月</output>
+              </div>
+              <label>
+                每月必要开支
+                <span class="input-with-unit"><input id="monthly-cost" inputmode="decimal" type="number" min="0" max="999999" step="100" value="3500"><span>元</span></span>
+              </label>
+              <label>
+                已有备用金
+                <span class="input-with-unit"><input id="current-reserve" inputmode="decimal" type="number" min="0" max="999999" step="100" value="2000"><span>元</span></span>
+              </label>
+              <p id="coverage-message">先攒到 1 个月必要开支，就是很稳的一步。</p>
+            </div>
+
+            <fieldset class="amount-picker">
+              <legend>今天先放进去</legend>
+              <div class="segmented-control" id="amount-options">
+                <button type="button" data-amount="8">8 元</button>
+                <button class="is-selected" type="button" data-amount="18" aria-pressed="true">18 元</button>
+                <button type="button" data-amount="28">28 元</button>
+              </div>
+            </fieldset>
+
+            <button class="primary-button" id="complete-task" type="button">
+              存入模拟小金库 18 元
+            </button>
+            <p class="transaction-note">仅更新本地演示数据，不调用支付或银行接口。</p>
+          </section>
+
+          <section class="knowledge-strip" aria-labelledby="knowledge-title">
+            <div class="knowledge-symbol" aria-hidden="true">盾</div>
+            <div>
+              <p class="eyebrow">今天带走一句话</p>
+              <h2 id="knowledge-title">备用金不是闲钱，是生活的缓冲垫</h2>
+              <p>先从 1 个月必要开支开始，再根据收入稳定性逐步增加。</p>
+            </div>
+          </section>
+
+          <aside class="stats-panel" aria-label="今日账户概览">
+            <div class="stat-block">
+              <span>模拟小金库</span>
+              <strong><span id="vault-balance">126.40</span> 元</strong>
+              <small>比昨天多 18.00 元</small>
+            </div>
+            <div class="stat-row">
+              <div>
+                <span>金豆</span>
+                <strong id="bean-count">420</strong>
+              </div>
+              <div>
+                <span>本周任务</span>
+                <strong id="weekly-count">1 / 7</strong>
+              </div>
+            </div>
+            <div class="team-preview">
+              <div>
+                <span>同路人小队</span>
+                <strong>4 人正在坚持</strong>
+              </div>
+              <button class="text-button" type="button" data-view="team">查看</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-map" data-view-panel="map" tabindex="-1" hidden>
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow">我的小家</p>
+            <h1>21天地图</h1>
+            <p>每 7 天完成一幕，把看清、积累和守护连成一个闭环。</p>
+          </div>
+          <div class="map-summary"><strong id="map-days">7</strong><span>已完成</span></div>
+        </div>
+        <div id="journey-map" class="journey-map"></div>
+      </section>
+
+      <section class="view" id="view-team" data-view-panel="team" tabindex="-1" hidden>
+        <div class="page-heading">
+          <div>
+            <p class="eyebrow">只比坚持 不比金额</p>
+            <h1>同路人小队</h1>
+            <p>熟人之间只展示打卡天数和进度，不展示任何金额。</p>
+          </div>
+          <button class="secondary-button" id="copy-code" type="button">复制邀请码 JINDOU21</button>
+        </div>
+
+        <section class="team-card" aria-labelledby="team-title">
+          <div class="team-card-heading">
+            <div>
+              <p class="eyebrow">本周共同目标</p>
+              <h2 id="team-title">4 人完成 20 次打卡</h2>
+            </div>
+            <strong>15 / 20</strong>
+          </div>
+          <div class="team-goal-progress"><span></span></div>
+          <div class="member-list" id="member-list"></div>
+        </section>
+
+        <section class="privacy-note" aria-labelledby="privacy-title">
+          <div class="privacy-symbol" aria-hidden="true">锁</div>
+          <div>
+            <h2 id="privacy-title">小队边界</h2>
+            <p>无陌生人匹配、无公开广场、无私聊。退出小队后，其他成员不再看到你的进度。</p>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <nav class="bottom-nav" aria-label="移动端主导航">
+    <button class="is-active" type="button" data-view="today" aria-current="page"><span aria-hidden="true">●</span>今日</button>
+    <button type="button" data-view="map"><span aria-hidden="true">▦</span>地图</button>
+    <button type="button" data-view="team"><span aria-hidden="true">◎</span>小队</button>
+  </nav>
+
+  <dialog id="success-dialog" class="result-dialog" aria-labelledby="result-title">
+    <div class="result-visual" aria-hidden="true">+50</div>
+    <p class="eyebrow">第 8 天完成</p>
+    <h2 id="result-title">你给生活留出了缓冲</h2>
+    <p>模拟小金库增加 <strong id="result-amount">18 元</strong>，小家解锁了维修工具和一盏暖灯。</p>
+    <div class="result-stats">
+      <span><strong>8</strong>连续天数</span>
+      <span><strong>470</strong>金豆总数</span>
+    </div>
+    <button class="primary-button" id="close-result" type="button">看看焕新的小家</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
