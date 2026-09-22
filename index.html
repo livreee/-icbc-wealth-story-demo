@@ -5,25 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#b51f2e">
   <meta name="description" content="工银财趣 21天财富剧本交互演示">
-  <title>工银财趣 21天财富剧本 Demo</title>
+  <title>工银财趣 · 21天财富剧本 Demo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23c62835'/%3E%3Cstop offset='1' stop-color='%238f1723'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='48' height='48' rx='12' fill='url(%23g)'/%3E%3Cpath d='M15 27l9-8 9 8v8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 15 35z' fill='%23fff'/%3E%3Cpath d='M17 24.5V18a1.5 1.5 0 0 1 3 0v3.5z' fill='%23ffd9a0'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- ===== 图标精灵 ===== -->
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <path d="M4 10.6 12 4l8 6.6V19a1.6 1.6 0 0 1-1.6 1.6h-4.2v-5.2h-4.4V20.6H5.6A1.6 1.6 0 0 1 4 19z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-map" viewBox="0 0 24 24">
+      <rect x="4.5" y="4.5" width="6" height="6" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="13.5" y="4.5" width="6" height="6" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="4.5" y="13.5" width="6" height="6" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="13.5" y="13.5" width="6" height="6" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="i-team" viewBox="0 0 24 24">
+      <circle cx="8.5" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M3.5 19c.4-3.2 2.3-5 5-5s4.6 1.8 5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="16" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M15.5 14.2c2.7.4 4.6 2.2 5 4.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24">
+      <path d="M4.6 8.5A7.5 7.5 0 1 1 4.4 14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+      <path d="M4.6 4v4.5H9.1" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 3.5 19 6v5.2c0 4.1-2.8 7.3-7 9.3-4.2-2-7-5.2-7-9.3V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M9 12l2 2 4-4.4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24">
+      <rect x="5.5" y="10.5" width="13" height="9.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="12" cy="15" r="1.4" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24">
+      <rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M6 15H5a1.5 1.5 0 0 1-1.5-1.5v-8A1.5 1.5 0 0 1 5 4h8A1.5 1.5 0 0 1 14.5 5.5v1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24">
+      <path d="M12 3c.6 4.2 2.3 6.4 6 7-3.7.6-5.4 2.8-6 7-.6-4.2-2.3-6.4-6-7 3.7-.6 5.4-2.8 6-7z" fill="currentColor"/>
+    </symbol>
+  </svg>
+
   <a class="skip-link" href="#main-content">跳到主要内容</a>
 
   <header class="topbar">
     <div class="brand" aria-label="工银财趣">
       <span class="brand-mark" aria-hidden="true">财</span>
-      <span>
+      <span class="brand-text">
         <strong>工银财趣</strong>
         <small>21天财富剧本</small>
       </span>
     </div>
 
     <div class="topbar-actions">
-      <span class="demo-tag">演示数据</span>
+      <span class="demo-tag">演示数据 · 无真实交易</span>
       <button class="icon-button" id="reset-demo" type="button" title="重置演示" aria-label="重置演示">
-        <span aria-hidden="true">↻</span>
+        <svg class="icon" aria-hidden="true"><use href="#i-reset" xlink:href="#i-reset"/></svg>
       </button>
     </div>
   </header>
@@ -32,23 +72,23 @@
     <aside class="sidebar" aria-label="主导航">
       <nav class="side-nav">
         <button class="nav-item is-active" type="button" data-view="today" aria-current="page">
-          <span class="nav-symbol" aria-hidden="true">●</span>
-          今日
+          <svg class="nav-icon" aria-hidden="true"><use href="#i-home" xlink:href="#i-home"/></svg>
+          <span>今日</span>
         </button>
         <button class="nav-item" type="button" data-view="map">
-          <span class="nav-symbol" aria-hidden="true">▦</span>
-          21天地图
+          <svg class="nav-icon" aria-hidden="true"><use href="#i-map" xlink:href="#i-map"/></svg>
+          <span>21天地图</span>
         </button>
         <button class="nav-item" type="button" data-view="team">
-          <span class="nav-symbol" aria-hidden="true">◎</span>
-          我的小队
+          <svg class="nav-icon" aria-hidden="true"><use href="#i-team" xlink:href="#i-team"/></svg>
+          <span>我的小队</span>
         </button>
       </nav>
 
       <section class="side-progress" aria-labelledby="side-progress-title">
         <p class="eyebrow">当前剧本</p>
         <h2 id="side-progress-title">我的小家</h2>
-        <p>第二幕 积累</p>
+        <p>第二幕 · 积累</p>
         <div class="progress-track" aria-label="剧本总进度">
           <span id="side-progress-bar"></span>
         </div>
@@ -62,6 +102,7 @@
     </aside>
 
     <main id="main-content" class="main-content">
+      <!-- ===== 视图：今日 ===== -->
       <section class="view is-active" id="view-today" data-view-panel="today" tabindex="-1">
         <div class="page-heading">
           <div>
@@ -70,6 +111,7 @@
             <p id="today-subheading">真正的安心，是意外来时手里还有选择。</p>
           </div>
           <div class="streak-chip" aria-label="连续打卡">
+            <svg class="streak-flame" aria-hidden="true"><use href="#i-spark" xlink:href="#i-spark"/></svg>
             <span class="streak-number" id="streak-count">7</span>
             <span>连续打卡</span>
           </div>
@@ -86,24 +128,26 @@
             </div>
 
             <div class="scene-frame" id="scene-frame">
+              <div class="scene-shade" aria-hidden="true"></div>
               <img id="room-image" src="room-day-8-before.svg" alt="刚完成基础布置但水管漏水的小房间">
+              <span class="scene-day-tag" aria-hidden="true">DAY 8</span>
               <div class="scene-status" id="scene-status">水管漏了，需要一笔以防万一的钱</div>
             </div>
 
             <div class="scene-footer">
-              <div>
+              <div class="scene-metric">
                 <span class="metric-label">小家完成度</span>
                 <strong id="room-percent">36%</strong>
               </div>
               <div class="mini-progress" aria-hidden="true"><span id="room-progress-bar"></span></div>
-              <div class="furniture-count"><strong id="furniture-count">6</strong> / 18 件</div>
+              <div class="furniture-count"><strong id="furniture-count">6</strong> / 18 件家具</div>
             </div>
           </section>
 
           <section class="task-card" aria-labelledby="task-title">
             <div class="task-kicker">
               <span>今日剧情</span>
-              <span>约 3 分钟</span>
+              <span class="task-duration">约 3 分钟</span>
             </div>
             <h2 id="task-title">水管突然爆了</h2>
             <p class="task-story">维修师傅说至少要 300 元。你不必今天凑齐，但可以先为意外留下一小笔。</p>
@@ -113,12 +157,12 @@
                 <h3 id="calculator-title">我的安全垫</h3>
                 <output id="coverage-output" for="monthly-cost current-reserve">约 0.6 个月</output>
               </div>
-              <label>
-                每月必要开支
+              <label class="calc-field">
+                <span class="calc-label">每月必要开支</span>
                 <span class="input-with-unit"><input id="monthly-cost" inputmode="decimal" type="number" min="0" max="999999" step="100" value="3500"><span>元</span></span>
               </label>
-              <label>
-                已有备用金
+              <label class="calc-field">
+                <span class="calc-label">已有备用金</span>
                 <span class="input-with-unit"><input id="current-reserve" inputmode="decimal" type="number" min="0" max="999999" step="100" value="2000"><span>元</span></span>
               </label>
               <p id="coverage-message">先攒到 1 个月必要开支，就是很稳的一步。</p>
@@ -140,7 +184,7 @@
           </section>
 
           <section class="knowledge-strip" aria-labelledby="knowledge-title">
-            <div class="knowledge-symbol" aria-hidden="true">盾</div>
+            <span class="knowledge-symbol" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-shield" xlink:href="#i-shield"/></svg></span>
             <div>
               <p class="eyebrow">今天带走一句话</p>
               <h2 id="knowledge-title">备用金不是闲钱，是生活的缓冲垫</h2>
@@ -169,12 +213,13 @@
                 <span>同路人小队</span>
                 <strong>4 人正在坚持</strong>
               </div>
-              <button class="text-button" type="button" data-view="team">查看</button>
+              <button class="text-button" type="button" data-view="team">查看 <span aria-hidden="true">→</span></button>
             </div>
           </aside>
         </div>
       </section>
 
+      <!-- ===== 视图：21天地图 ===== -->
       <section class="view" id="view-map" data-view-panel="map" tabindex="-1" hidden>
         <div class="page-heading">
           <div>
@@ -187,14 +232,18 @@
         <div id="journey-map" class="journey-map"></div>
       </section>
 
+      <!-- ===== 视图：我的小队 ===== -->
       <section class="view" id="view-team" data-view-panel="team" tabindex="-1" hidden>
         <div class="page-heading">
           <div>
-            <p class="eyebrow">只比坚持 不比金额</p>
+            <p class="eyebrow">只比坚持 · 不比金额</p>
             <h1>同路人小队</h1>
             <p>熟人之间只展示打卡天数和进度，不展示任何金额。</p>
           </div>
-          <button class="secondary-button" id="copy-code" type="button">复制邀请码 JINDOU21</button>
+          <button class="secondary-button" id="copy-code" type="button">
+            <svg class="icon icon-sm" aria-hidden="true"><use href="#i-copy" xlink:href="#i-copy"/></svg>
+            复制邀请码 JINDOU21
+          </button>
         </div>
 
         <section class="team-card" aria-labelledby="team-title">
@@ -210,7 +259,7 @@
         </section>
 
         <section class="privacy-note" aria-labelledby="privacy-title">
-          <div class="privacy-symbol" aria-hidden="true">锁</div>
+          <span class="privacy-symbol" aria-hidden="true"><svg class="icon icon-lg"><use href="#i-lock" xlink:href="#i-lock"/></svg></span>
           <div>
             <h2 id="privacy-title">小队边界</h2>
             <p>无陌生人匹配、无公开广场、无私聊。退出小队后，其他成员不再看到你的进度。</p>
@@ -221,13 +270,22 @@
   </div>
 
   <nav class="bottom-nav" aria-label="移动端主导航">
-    <button class="is-active" type="button" data-view="today" aria-current="page"><span aria-hidden="true">●</span>今日</button>
-    <button type="button" data-view="map"><span aria-hidden="true">▦</span>地图</button>
-    <button type="button" data-view="team"><span aria-hidden="true">◎</span>小队</button>
+    <button class="is-active" type="button" data-view="today" aria-current="page">
+      <svg class="nav-icon" aria-hidden="true"><use href="#i-home" xlink:href="#i-home"/></svg>今日
+    </button>
+    <button type="button" data-view="map">
+      <svg class="nav-icon" aria-hidden="true"><use href="#i-map" xlink:href="#i-map"/></svg>地图
+    </button>
+    <button type="button" data-view="team">
+      <svg class="nav-icon" aria-hidden="true"><use href="#i-team" xlink:href="#i-team"/></svg>小队
+    </button>
   </nav>
 
   <dialog id="success-dialog" class="result-dialog" aria-labelledby="result-title">
-    <div class="result-visual" aria-hidden="true">+50</div>
+    <div class="result-burst" aria-hidden="true">
+      <span class="result-ring"></span>
+      <div class="result-visual">+50</div>
+    </div>
     <p class="eyebrow">第 8 天完成</p>
     <h2 id="result-title">你给生活留出了缓冲</h2>
     <p>模拟小金库增加 <strong id="result-amount">18 元</strong>，小家解锁了维修工具和一盏暖灯。</p>
